@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoría de la Relatividad de Einstein</title>
+    <style>
+        /* Estilos para las pestañas */
+        .tab {
+            display: none;
+        }
+        /* Estilo para el contenido visible */
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Pestañas -->
+    <button onclick="mostrarContenido('explicacion')">Explicación</button>
+    <button onclick="mostrarContenido('video')">Video</button>
+
+    <!-- Contenido -->
+    <div id="explicacion" class="tab active">
+        <h1>Teoría de la Relatividad de Einstein</h1>
+        <p>La teoría de la relatividad es una teoría física propuesta por Albert Einstein en el siglo XX...</p>
+        <!-- Agrega más contenido aquí -->
+    </div>
+
+    <div id="video" class="tab">
+        <h1>Video Explicativo</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TUw9z6KZa2M" frameborder="0" allowfullscreen></iframe>
+        <!-- Agrega más contenido aquí -->
+    </div>
+
+    <!-- Script para cambiar entre pestañas -->
+    <script>
+        function mostrarContenido(tabId) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>  
